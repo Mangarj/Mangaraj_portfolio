@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangaraj Das - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #000024;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      background: rgb(21, 21, 206);
+      padding: 0 50px;
+      z-index: 1000;
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #9c97f1;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 10%;
+    }
+
+    /* Home Section */
+    .firstSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .leftSection {
+      font-size: 2.5rem;
+    }
+
+    .purple {
+      color: #9c97f1;
+      font-weight: bold;
+    }
+
+    .rightSection img {
+      width: 350px;
+      border-radius: 50%;
+      border: 5px solid #9c97f1;
+    }
+
+    .cv-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 8px 15px; /* smaller size */
+      background: #9c97f1;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem; /* smaller font */
+      transition: 0.3s;
+    }
+
+    .cv-btn:hover {
+      background: #7d75e6;
+    }
+
+    /* Social Links */
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+      color: white;
+      font-size: 1.8rem;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #9c97f1;
+    }
+
+    /* Other Sections (same as before) */
+    .about {
+      background: #0a0a2e;
+      text-align: center;
+    }
+
+    .about h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .services {
+      background: #000030;
+    }
+
+    .services h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #111144;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      background: #1a1a66;
+      transform: translateY(-5px);
+    }
+
+    .projects {
+      background: #0a0a2e;
+    }
+
+    .projects h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .project-item {
+      background: #111144;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      transition: 0.3s;
+    }
+
+    .project-item:hover {
+      background: #1a1a66;
+    }
+
+    .contact {
+      background: #000030;
+      text-align: center;
+    }
+
+    .contact h1 {
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: #9c97f1;
+      border: none;
+      padding: 12px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #7d75e6;
+    }
+
+    footer {
+      background: rgb(3, 3, 151);
+      text-align: center;
+      padding: 15px;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="left">Mangaraj Portfolio</div>
+    <div class="right">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="firstSection">
+    <div class="leftSection">
+      Hi, I'm <span class="purple">Mangaraj</span><br>
+      <span id="element"></span><br>
+      <a href="Mangaraj_Das_CV.pdf" download class="cv-btn">Download CV</a>
+
+      <!-- Social Media Links with only icons -->
+      <div class="social-links">
+        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="rightSection">
+      <img src="11zon_cropped.png" alt="Profile Image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h1>About Me</h1>
+    <p>
+      I am Mangaraj Das, a passionate Frontend Developer and Data Enthusiast with experience in building
+      responsive websites, data analytics projects, and machine learning applications. I love turning ideas into
+      digital solutions that make an impact.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h1>Services</h1>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Building modern, responsive, and interactive websites using HTML, CSS, JavaScript, and frameworks.</p>
+      </div>
+      <div class="card">
+        <h3>Data Analytics</h3>
+        <p>Analyzing business data using SQL, Python, and Power BI to generate actionable insights.</p>
+      </div>
+      <div class="card">
+        <h3>Machine Learning</h3>
+        <p>Developing ML models for prediction, classification, and data-driven decision-making.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h1>Projects</h1>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Online Quiz Website</h3>
+        <p>Developed an interactive quiz platform with MCQs, instant scoring, and timer functionality.</p>
+      </div>
+      <div class="project-item">
+        <h3>IPL Win Prediction</h3>
+        <p>Built a machine learning model to predict IPL match outcomes using Python and TensorFlow.</p>
+      </div>
+      <div class="project-item">
+        <h3>Vendor Performance Analytics</h3>
+        <p>Analyzed vendor data with SQL & Python and built Power BI dashboards for procurement insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h1>Contact Me</h1>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mangaraj Das | All Rights Reserved
+  </footer>
+
+  <!-- Typed.js Effect -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Frontend Developer', 'Python Developer', 'Data Analyst'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+</html>
+
